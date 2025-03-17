@@ -8,15 +8,18 @@ title: 11ty Boilerplate
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/styles/screen.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.7.1"></script>
+  <script type="module" src="/styles/utils.js"></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
-    </ul>
-  </nav>
+    <table id="books">
+      <tr>
+        <td>Title</td>
+        <td>Author</td>
+        <td>ISBN</td>
+      </tr>
+    </table>
+    
     {{ content }}
 </body>
 </html>
